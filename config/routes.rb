@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 root 'welcome#index'
 
 
+=======
+  devise_for :users
+
+
+  root 'static_pages#home'
+
+  #more lines of commented out code
+>>>>>>> origin/master
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
