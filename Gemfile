@@ -1,5 +1,22 @@
 source 'https://rubygems.org'
 
+# Additions for evernote implementation
+# -------------------------------------
+gem 'simple_form'
+
+# You'll need to include the following dependencies of Summernote
+gem 'bootstrap-sass'
+gem "font-awesome-rails"
+
+# This is the right gem to use summernote editor in Rails projects.
+gem 'summernote-rails'
+gem 'codemirror-rails'
+
+# To solve the problems on the turbolinks
+gem 'jquery-turbolinks'
+
+# ----------------------------
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
