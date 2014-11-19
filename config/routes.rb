@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-
+  get 'sign_up' => 'registration_controller#new'
+  post 'resource' => 'registration_controller#create'
+  get 'edit' => 'registration_controller#edit'
+  put 'update' => 'registration_controller#update'
+  delete 'destroy' => 'registration_controller#destroy'
+  cancel 'cancel' => 'registration_controller#cancel'
+  
 
   root 'static_pages#home'
 
