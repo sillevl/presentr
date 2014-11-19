@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   cancel 'cancel' => 'registration_controller#cancel'
   
 
-  root 'static_pages#home'
+root 'welcome#index'
 
-  #more lines of commented out code
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
