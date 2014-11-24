@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'sign_up' => 'registration_controller#new'
-  post 'resource' => 'registration_controller#create'
-  get 'edit' => 'registration_controller#edit'
-  put 'update' => 'registration_controller#update'
-  delete 'destroy' => 'registration_controller#destroy'
-  cancel 'cancel' => 'registration_controller#cancel'
-  
-
   resources :presentations
-
-root 'welcome#index'
-
+  root 'welcome#index'
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
