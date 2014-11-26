@@ -12,7 +12,20 @@
  *
  *= require_tree .
  *= require_self
+ *
+ *= require reveal
+ *= require reveal-theme/default
+ *= require reveal-theme/beige
+ *= require reveal-theme/blood
+ *= require reveal-theme/moon
+ *= require reveal-theme/night
+ *= require reveal-theme/serif
+ *= require reveal-theme/simple
+ *= require reveal-theme/sky
+ *= require reveal-theme/solarized
+ *= require foundation_and_overrides
  */
+
 // Bootstrap 3
 @import "bootstrap";
 @import "font-awesome";
@@ -47,3 +60,5 @@ body {padding-top:3em;}
 //= require lang/summernote-ko-KR
 //= require_tree .
 //= require turbolinks
+//= require foundation 
+
