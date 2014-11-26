@@ -4,10 +4,17 @@
   <strong>Name:</strong>
   <%= @presentation.name %>
 </p>
+<p>
+  <strong>Discription:</strong>
+  <%= @presentation.discription %>
+</p>
 
 <table>
 	<thead>
 		<tr>
+			<th>
+				Slide number	
+			</th>
 			<th width="200">
 				Slide
 			</th>
@@ -20,7 +27,10 @@
 	<% @presentation.slides.each do |slide| %>
 	<tr>
 		<td>
-			<%= link_to slide.id, slide %>
+			<%= link_to slide.slide_number, slide %>
+		</td>
+		<td>
+			<%=  slide.slide_name %>
 		</td>
 		<td>
 			<%= link_to 'Edit slide', edit_slide_path(slide.id) %> |

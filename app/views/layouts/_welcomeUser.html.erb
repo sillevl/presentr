@@ -7,6 +7,9 @@ Click any presentation to get detailed information about the presentation and to
 				Presentation
 			</th>
 			<th>
+				Discription	
+			</th>
+			<th>
 				User actions	
 			</th>
 		</tr>
@@ -16,6 +19,9 @@ Click any presentation to get detailed information about the presentation and to
 		<tr>
 			<td>
 				<%= link_to presentation.name, presentation %>
+			</td>
+			<td>
+				<%= presentation.discription %>
 			</td>
 			<td>
 				<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) %> |

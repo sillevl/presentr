@@ -16,8 +16,13 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user, :value => current_user.email %>
+    <%= f.label :user_id %><br>
+<!--     <%= f.number_field :user_id, :value => current_user.id %> -->
+     <%= f.collection_select :user_id, User.all, :id , :email, :prompt => true, :value => current_user.email %>
+  </div>
+    <div class="field">
+    <%= f.label :discription %><br>
+    <%= f.text_area :discription %>
   </div>
   <div class="actions">
     <%= f.submit %>
