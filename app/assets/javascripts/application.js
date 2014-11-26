@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+
 //= require bootstrap
 //= require codemirror
 //= require codemirror/modes/ruby
@@ -35,3 +36,8 @@
 //= require lang/summernote-ko-KR
 //= require_tree .
 //= require turbolinks 
+//= require foundation
+
+
+$(function(){ $(document).foundation(); });
+

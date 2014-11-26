@@ -11,7 +11,7 @@ $ ->
 	  summer_note.summernote
 	    # to set options
 	    height:500
-	    #lang: 'ko-KR'
+	   
 	    codemirror:
 	      lineNumbers: true
 	      tabSize: 2
