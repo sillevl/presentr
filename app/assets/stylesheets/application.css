@@ -24,7 +24,9 @@
  *= require reveal-theme/sky
  *= require reveal-theme/solarized
  *= require foundation_and_overrides
+ *= require foundation
  */
+
 
 // Bootstrap 3
 @import "bootstrap";
@@ -57,7 +59,7 @@ body {padding-top:3em;}
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
 //= require summernote
-//= require lang/summernote-ko-KR
+//= require lang/summernote
 //= require_tree .
 //= require turbolinks
 //= require foundation 

@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+
   resources :slides
   resources :presentations
   root 'welcome#index'
   devise_for :users
+  resources :posts
+  #root 'static_pages#home'
+
+  #more lines of commented out code
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
