@@ -10,5 +10,23 @@
   <%= @presentation.user %>
 </p>
 
-<%= link_to 'Edit', edit_presentation_path(@presentation) %> |
-<%= link_to 'Back', presentations_path %>
+<table>
+	<% @presentation.slides.each do |slide| %>
+		<tr>
+			<td>
+				<ul>
+					<li>
+						<%= link_to slide.id, slide %>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<%= link_to 'Edit slide', edit_slide_path(slide.id) %> 
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'New Slide', new_slide_path, :class => 'button' %>
+<%= link_to 'Edit presentation', edit_presentation_path(@presentation), :class => 'button' %> 
+<%= link_to 'Back to all presentations', presentations_path, :class => 'button' %>
