@@ -5,28 +5,31 @@
   <%= @presentation.name %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @presentation.user %>
-</p>
-
 <table>
-	<% @presentation.slides.each do |slide| %>
+	<thead>
 		<tr>
-			<td>
-				<ul>
-					<li>
-						<%= link_to slide.id, slide %>
-					</li>
-				</ul>
-			</td>
-			<td>
-				<%= link_to 'Edit slide', edit_slide_path(slide.id) %> 
-			</td>
+			<th width="200">
+				Slide
+			</th>
+			<th>
+				User actions	
+			</th>
 		</tr>
+	</thead>
+	<tbody>
+	<% @presentation.slides.each do |slide| %>
+	<tr>
+		<td>
+			<%= link_to slide.id, slide %>
+		</td>
+		<td>
+			<%= link_to 'Edit slide', edit_slide_path(slide.id) %> |
+			<%= link_to 'Delete slide', slide, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</td>
+	</tr>
 	<% end %>
+	</tbody>
 </table>
 
 <%= link_to 'New Slide', new_slide_path, :class => 'button' %>
-<%= link_to 'Edit presentation', edit_presentation_path(@presentation), :class => 'button' %> 
-<%= link_to 'Back to all presentations', presentations_path, :class => 'button' %>
+<%= link_to 'Back to all presentations', "/", :class => 'button' %>
