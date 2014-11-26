@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
+// require jquery.turbolinks
 //= require jquery_ujs
 
 //= require bootstrap
@@ -36,7 +36,7 @@
 //= require lang/summernote-ko-KR
 //= require_tree .
 //= require reveal
-//= require turbolinks 
+// require turbolinks 
 //= require foundation
 
 
