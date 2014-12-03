@@ -1,0 +1,34 @@
+<h1>Welcome <%= current_user.email%></h1>
+Click any presentation to get detailed information about the presentation and to enter new slides.
+<table>
+	<thead>
+		<tr>
+			<th width="200">
+				Presentation
+			</th>
+			<th>
+				Discription	
+			</th>
+			<th>
+				User actions	
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @presentations.each do |presentation| %>
+		<tr>
+			<td>
+				<%= link_to presentation.name, presentation %>
+			</td>
+			<td>
+				<%= presentation.discription %>
+			</td>
+			<td>
+				<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) %> |
+				<%= link_to 'Delete presentation', presentation, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= link_to 'New presentation', new_presentation_path, :class => 'button' %>

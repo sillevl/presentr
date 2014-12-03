@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :slide_name %><br>
+    <%= f.text_field :slide_name %>
+  </div>
+  <div class="field">
     <%= f.label :slide_number %><br>
     <%= f.number_field :slide_number %>
   </div>
@@ -27,13 +31,15 @@
 
     <div class="large-6 columns">
       <%= f.label :slides %><br>
-      <div class="reveal">
-        <div class="slides">
-            <section>Single Horizontal Slide</section>
-            <section>
-                <section>Vertical Slide 1</section>
-                <section>Vertical Slide 2</section>
-            </section>
+      <div class="reveal-wrapper">
+        <div class="reveal">
+          <div class="slides">
+              <section>Single Horizontal Slide</section>
+              <section>
+                  <section>Vertical Slide 1</section>
+                  <section>Vertical Slide 2</section>
+              </section>
+          </div>
         </div>
       </div>  
     </div>
@@ -43,12 +49,17 @@
 
   <div class="field">
     <%= f.label :presentation_id %><br>
-    <%= f.number_field :presentation_id %>
+<!--     <%= f.number_field :presentation_id %> -->
+     <%= f.collection_select :presentation_id, Presentation.all, :id , :name, :prompt => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
   
 <% end %>
-<%= revealInitializeDefault %>
+
+
+<% content_for :reveal do 
+  revealInitializeSingleSlide  
+end %> 
 

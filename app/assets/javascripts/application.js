@@ -33,8 +33,10 @@
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
 //= require summernote
-//= require lang/summernote-ko-KR
+// require lang/summernote-ko-KR
 //= require_tree .
+//= stub reveal_initialize_single_slide
+//= stub reveal_initialize_default
 //= require reveal
 // require turbolinks 
 //= require foundation
