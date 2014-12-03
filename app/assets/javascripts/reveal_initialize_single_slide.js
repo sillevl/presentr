@@ -1,7 +1,7 @@
 $(function(){
 Reveal.initialize({
     // Display controls in the bottom right corner
-    controls: true,
+    controls: false,
 
     // Display a presentation progress bar
     progress: false,
@@ -73,3 +73,14 @@ Reveal.initialize({
     parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
 });}
 );
+
+
+$(document).ready(function() {
+    $('#editor-content').summernote({
+      onkeyup: function(e) {
+        $("#slide-content").html($("#editor-content").code());
+        console.log($("#editor-content").code());
+      },
+      
+    });
+});

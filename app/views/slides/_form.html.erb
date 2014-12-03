@@ -19,12 +19,12 @@
     <%= f.label :slide_number %><br>
     <%= f.number_field :slide_number %>
   </div>
-  <div class="row fullWidth">
+  <div class="row fullWidth" data-no-turbolink>
     <div class="large-6 columns">
       <div class="field">
         <%= f.label :content %><br>
        <!-- <%= f.text_field :content %> -->
-        <%= f.text_field :content, class:'summernote' %>
+        <%= f.text_field :content, class:'summernote',id: "editor-content" %>
       </div>  
     </div>
 
@@ -34,11 +34,8 @@
       <div class="reveal-wrapper">
         <div class="reveal">
           <div class="slides">
-              <section>Single Horizontal Slide</section>
-              <section>
-                  <section>Vertical Slide 1</section>
-                  <section>Vertical Slide 2</section>
-              </section>
+              <section id="slide-content"></section>
+             
           </div>
         </div>
       </div>  
