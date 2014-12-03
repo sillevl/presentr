@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203125131) do
-
-  
+ActiveRecord::Schema.define(version: 20141203162130) do
 
   create_table "presentations", force: true do |t|
     t.string   "name"
@@ -21,7 +19,10 @@ ActiveRecord::Schema.define(version: 20141203125131) do
     t.datetime "updated_at"
     t.string   "discription"
     t.integer  "user_id"
+    t.integer  "theme_id"
   end
+
+  add_index "presentations", ["theme_id"], name: "index_presentations_on_theme_id"
 
   create_table "slides", force: true do |t|
     t.integer  "slide_number"
@@ -30,7 +31,10 @@ ActiveRecord::Schema.define(version: 20141203125131) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slide_name"
+    t.integer  "transistion_id"
   end
+
+  add_index "slides", ["transistion_id"], name: "index_slides_on_transistion_id"
 
   create_table "themes", force: true do |t|
     t.string   "name"
