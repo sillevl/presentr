@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118104528) do
+ActiveRecord::Schema.define(version: 20141126175859) do
+
+  create_table "presentations", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "discription"
+    t.integer  "user_id"
+  end
+
+  create_table "slides", force: true do |t|
+    t.integer  "slide_number"
+    t.string   "content"
+    t.integer  "presentation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slide_name"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
