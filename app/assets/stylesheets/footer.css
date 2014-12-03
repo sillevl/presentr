@@ -1,0 +1,12 @@
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: red;
+    padding: 15px;
+}
+#footer_text{
+	color: white;
+    font-size: 20
+}
