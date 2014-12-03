@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :presentations
   root 'welcome#index'
   devise_for :users
-  resources :posts
+
   #root 'static_pages#home'
 
   #more lines of commented out code
