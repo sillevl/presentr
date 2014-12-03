@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20141203162130) do
 
+    create_table "courses", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "courses", ["user_id"], name: "index_courses_on_user_id"
+
   create_table "presentations", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -20,8 +30,10 @@ ActiveRecord::Schema.define(version: 20141203162130) do
     t.string   "discription"
     t.integer  "user_id"
     t.integer  "theme_id"
+    t.integer  "course_id"
   end
 
+  add_index "presentations", ["course_id"], name: "index_presentations_on_course_id"
   add_index "presentations", ["theme_id"], name: "index_presentations_on_theme_id"
 
   create_table "slides", force: true do |t|
@@ -69,4 +81,17 @@ ActiveRecord::Schema.define(version: 20141203162130) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
+  create_table "themes", force: true do |t|
+    t.string   "name"
+    t.text     "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transistions", force: true do |t|
+    t.string   "name"
+    t.text     "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 end

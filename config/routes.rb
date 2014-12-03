@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :courses
   resources :slides
   resources :presentations
+  
   root 'welcome#index'
   devise_for :users
 
