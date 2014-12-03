@@ -6,4 +6,5 @@ module ApplicationHelper
     def enableSlideNumbers
     	javascript_tag "Reveal.configure({ slideNumber: true })"
     end
+
 end
