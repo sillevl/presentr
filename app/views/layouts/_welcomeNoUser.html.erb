@@ -1,2 +1,29 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome</h1>
+Please login to manage your presentations.
+<table>
+	<thead>
+		<tr>
+			<th width="200">
+				Presentation
+			</th>
+			<th>
+				Discription	
+			</th>
+			<th>
+				User actions	
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @presentations.each do |presentation| %>
+		<tr>
+			<td>
+				<%= link_to presentation.name, presentation %>
+			</td>
+			<td>
+				<%= presentation.discription %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
