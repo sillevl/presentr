@@ -15,19 +15,23 @@ Click any presentation to get detailed information about the presentation and to
 		</tr>
 	</thead>
 	<tbody>
-		<% @presentations.each do |presentation| %>
-		<tr>
-			<td>
-				<%= link_to presentation.name, presentation %>
-			</td>
-			<td>
-				<%= presentation.discription %>
-			</td>
-			<td>
-				<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) %> |
-				<%= link_to 'Delete presentation', presentation, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</td>
-		</tr>
+		<% if !@presentations.blank? %>	
+			<% @presentations.each do |presentation| %>
+			<tr>
+				<td>
+					<%= link_to presentation.name, presentation %>
+				</td>
+				<td>
+					<%= presentation.discription %>
+				</td>
+				<td>
+					<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) %> |
+					<%= link_to 'Delete presentation', presentation, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</td>
+			</tr>
+			<% end %>
+		<% else %>
+			<p>You have no presentations. To create a presentation click button below.</p>
 		<% end %>
 	</tbody>
 </table>
