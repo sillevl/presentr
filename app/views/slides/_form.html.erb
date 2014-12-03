@@ -24,9 +24,7 @@
     <%= f.text_field :content %>
   </div>
   <div class="field">
-    <%= f.label :presentation_id %><br>
-<!--     <%= f.number_field :presentation_id %> -->
-     <%= f.collection_select :presentation_id, Presentation.all, :id , :name, :prompt => true %>
+    <%= f.hidden_field :presentation_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
