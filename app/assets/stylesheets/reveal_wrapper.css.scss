@@ -1,0 +1,24 @@
+			html, body {
+				overflow: auto !important;
+				height: auto !important;
+				background: #fff;
+			}
+			.reveal-wrapper {
+				position: relative;
+				height: 400px;
+			}
+ 
+			.reveal {
+				background-color: #333;
+			}
+ 
+			.reveal .controls,
+			.reveal .progress,
+			.reveal .playback {
+				position: relative !important;
+			}
+ 
+			.content-wrapper {
+				width: 100%;
+				background: #fff;
+			}

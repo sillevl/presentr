@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'presentations/:id/slides/new' => 'slides#new', as: 'presentation_new_slide'
   get 'presentations/:id/slides' => 'presentations#show', as: 'presentation_show_slides'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
