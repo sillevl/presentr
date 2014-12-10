@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20141203162130) do
     t.integer  "transistion_id"
   end
 
-
   add_index "slides", ["transistion_id"], name: "index_slides_on_transistion_id"
 
   create_table "themes", force: true do |t|
@@ -81,20 +80,5 @@ ActiveRecord::Schema.define(version: 20141203162130) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-
-
-  create_table "themes", force: true do |t|
-    t.string   "name"
-    t.text     "code"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "transistions", force: true do |t|
-    t.string   "name"
-    t.text     "code"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end
