@@ -75,12 +75,32 @@ Reveal.initialize({
 );
 
 
-$(document).ready(function() {
-    $('#editor-content').summernote({
-      onkeyup: function(e) {
-        $("#slide-content").html($("#editor-content").code());
-        console.log($("#editor-content").code());
-      },
+// $(document).ready(function() {
+//     $('#slide_content').summernote({
+//       onkeyup: function(e) {
+//         $("#preview").html($("#slide_content").code());
+//         //console.log($("#slide_content").code());
+
+//       }
       
-    });
+//     });
+// });
+
+
+/*$('#knop_id').click = function(e) {
+       // $("#preview").html($("#slide_content").code());
+        console.log("knop geklikt");
+
+      };
+*/
+
+
+$(document).keydown(function (e) {
+    if ( e.which == 81 && e.ctrlKey) {
+        e.preventDefault();
+        $("#preview").html($("#slide_content").code());
+        console.log("key pressed");
+    }
 });
+
+ 

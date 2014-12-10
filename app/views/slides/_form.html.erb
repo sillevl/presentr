@@ -23,8 +23,8 @@
     <div class="large-6 columns">
       <div class="field">
         <%= f.label :content %><br>
-       <!-- <%= f.text_field :content %> -->
-        <%= f.text_field :content, class:'summernote',id: "editor-content" %>
+       
+        <%= f.text_field :content, class:'summernote', id:"slide_content"%>
       </div>  
     </div>
 
@@ -34,7 +34,7 @@
       <div class="reveal-wrapper">
         <div class="reveal">
           <div class="slides">
-              <section id="slide-content"></section>
+              <section id="preview"></section>
              
           </div>
         </div>
