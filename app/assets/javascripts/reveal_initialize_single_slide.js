@@ -75,18 +75,6 @@ Reveal.initialize({
 );
 
 
-// $(document).ready(function() {
-//     $('#slide_content').summernote({
-//       onkeyup: function(e) {
-//         $("#preview").html($("#slide_content").code());
-//         //console.log($("#slide_content").code());
-
-//       }
-      
-//     });
-// });
-
-
 /*$('#knop_id').click = function(e) {
        // $("#preview").html($("#slide_content").code());
         console.log("knop geklikt");
@@ -98,8 +86,9 @@ Reveal.initialize({
 $(document).keydown(function (e) {
     if ( e.which == 81 && e.ctrlKey) {
         e.preventDefault();
-        $("#preview").html($("#slide_content").code());
+        $("#preview").html($.parseHTML($("#slide_content").code()));
         console.log("key pressed");
+        Reveal.initialize();
     }
 });
 
