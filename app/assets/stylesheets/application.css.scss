@@ -24,5 +24,44 @@
  *= require reveal-theme/sky
  *= require reveal-theme/solarized
  *= require foundation_and_overrides
+ *= require foundation
+ *= require foundation_custom
  */
-/*= require foundation */
+
+
+// Bootstrap 3
+@import "bootstrap";
+@import "font-awesome";
+@import "summernote";
+@import "codemirror";
+@import "codemirror/themes/solarized";
+
+body {padding-top:3em;}
+
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require bootstrap
+//= require codemirror
+//= require codemirror/modes/ruby
+//= require codemirror/modes/sass
+//= require codemirror/modes/shell
+//= require codemirror/modes/sql
+//= require codemirror/modes/slim
+//= require codemirror/modes/nginx
+//= require codemirror/modes/markdown
+//= require codemirror/modes/javascript
+//= require codemirror/modes/http
+//= require codemirror/modes/htmlmixed
+//= require codemirror/modes/haml
+//= require codemirror/modes/xml
+//= require codemirror/modes/css
+//= require codemirror/modes/yaml
+//= require codemirror/modes/slim
+//= require codemirror/modes/php
+//= require summernote
+//= require lang/summernote
+//= require_tree .
+//= require turbolinks
+//= require foundation 
+

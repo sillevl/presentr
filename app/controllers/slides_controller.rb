@@ -14,6 +14,7 @@ class SlidesController < ApplicationController
 
   def new
     @slide = Slide.new
+    @slide.presentation = Presentation.find_by_id(params[:id])
     respond_with(@slide)
   end
 
@@ -42,6 +43,6 @@ class SlidesController < ApplicationController
     end
 
     def slide_params
-      params.require(:slide).permit(:slide_number, :content, :presentation_id)
+      params.require(:slide).permit(:slide_number, :content, :presentation_id, :slide_name)
     end
 end

@@ -1,6 +1,7 @@
 class Presentation < ActiveRecord::Base
 	belongs_to :user
+	belongs_to :course
 	has_many :slides
-	validates :user,  presence: true
+	has_one :theme
 	validates :name,  presence: true
 end

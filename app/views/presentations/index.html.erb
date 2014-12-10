@@ -1,4 +1,4 @@
-<h1>Listing presentations</h1>
+<!-- <h1>Listing presentations</h1>
 
 <table>
   <thead>
@@ -13,7 +13,7 @@
     <% @presentations.each do |presentation| %>
       <tr>
         <td><%= presentation.name %></td>
-        <td><%= presentation.user %></td>
+
         <td><%= link_to 'Show', presentation %></td>
         <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
         <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -22,6 +22,10 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
 
-<%= link_to 'New Presentation', new_presentation_path %>
+<% if user_signed_in? %>
+  <%= render 'layouts/welcomeUser' %>
+<% else %>
+  <%= render 'layouts/welcomeNoUser' %>
+<% end %>
