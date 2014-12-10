@@ -1,0 +1,10 @@
+<% @courses.each do |course| %>
+  <h2><%= link_to course.name, course %></h2>
+  <ul>
+    <% course.presentations.each do |presentation| %>
+    <h3>
+      <%= link_to presentation.name, presentation %>
+    </h3>
+    <% end %>
+  </ul>
+<% end %>
