@@ -14,6 +14,7 @@ class SlidesController < ApplicationController
 
   def new
     @slide = Slide.new
+    @slide.presentation = Presentation.find_by_id(params[:id])
     respond_with(@slide)
   end
 
