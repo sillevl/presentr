@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20141203162130) do
     t.datetime "updated_at"
     t.string   "discription"
     t.integer  "user_id"
-    t.integer  "course_id"
     t.integer  "theme_id"
+    t.integer  "course_id"
   end
 
   add_index "presentations", ["course_id"], name: "index_presentations_on_course_id"

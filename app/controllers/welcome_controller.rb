@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
   	if user_signed_in?
-  		@presentations = Presentation.find_by_id(current_user.id)
+  		@presentations = current_user.presentations
   	else
   		@presentations = Presentation.all
   	end

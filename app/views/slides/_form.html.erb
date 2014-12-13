@@ -11,49 +11,52 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :slide_name %><br>
-    <%= f.text_field :slide_name %>
-  </div>
-  <div class="field">
-    <%= f.label :slide_number %><br>
-    <%= f.number_field :slide_number %>
-  </div>
-  <div class="row fullWidth">
-    <div class="large-6 columns">
-      <div class="field">
-        <%= f.label :content %><br>
-       <!-- <%= f.text_field :content %> -->
-        <%= f.text_field :content, class:'summernote' %>
-      </div>  
+<div class="row">
+  <div class="small-6 large-5 columns">
+    <div class="field">
+      <%= f.label :slide_name %><br>
+      <%= f.text_field :slide_name %>
     </div>
+    <div class="field">
+      <%= f.label :slide_number %><br>
+      <%= f.number_field :slide_number %>
+    </div>
+    <div class="row fullWidth">
+      <div class="large-6 columns">
+        <div class="field">
+          <%= f.label :content %><br>
+         <!-- <%= f.text_field :content %> -->
+          <%= f.text_field :content, class:'summernote' %>
+        </div>  
+      </div>
 
 
-    <div class="large-6 columns">
-      <%= f.label :slides %><br>
-      <div class="reveal-wrapper">
-        <div class="reveal">
-          <div class="slides">
-              <section>Single Horizontal Slide</section>
-              <section>
-                  <section>Vertical Slide 1</section>
-                  <section>Vertical Slide 2</section>
-              </section>
+      <div class="large-6 columns">
+        <%= f.label :slides %><br>
+        <div class="reveal-wrapper">
+          <div class="reveal">
+            <div class="slides">
+                <section>Single Horizontal Slide</section>
+                <section>
+                    <section>Vertical Slide 1</section>
+                    <section>Vertical Slide 2</section>
+                </section>
+            </div>
           </div>
-        </div>
-      </div>  
+        </div>  
+      </div>
+    </div>
+
+
+
+    <div class="field">
+      <%= f.hidden_field :presentation_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   </div>
-
-
-
-  <div class="field">
-    <%= f.hidden_field :presentation_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  
+</div>    
 <% end %>
 
 
