@@ -1,7 +1,7 @@
 $(function(){
 Reveal.initialize({
     // Display controls in the bottom right corner
-    controls: true,
+    controls: false,
 
     // Display a presentation progress bar
     progress: false,
@@ -73,3 +73,23 @@ Reveal.initialize({
     parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
 });}
 );
+
+
+/*$('#knop_id').click = function(e) {
+       // $("#preview").html($("#slide_content").code());
+        console.log("knop geklikt");
+
+      };
+*/
+
+
+$(document).keydown(function (e) {
+    if ( e.which == 81 && e.ctrlKey) {
+        e.preventDefault();
+        $("#preview").html($.parseHTML($("#slide_content").code()));
+        console.log("key pressed");
+        Reveal.initialize();
+    }
+});
+
+ 

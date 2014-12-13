@@ -16,21 +16,17 @@
     <div class="field">
       <%= f.label :slide_name %><br>
       <%= f.text_field :slide_name %>
-    </div>
-    <div class="field">
-      <%= f.label :slide_number %><br>
-      <%= f.number_field :slide_number %>
-    </div>
-    <div class="row fullWidth">
-      <div class="large-6 columns">
-        <div class="field">
-          <%= f.label :content %><br>
-         <!-- <%= f.text_field :content %> -->
-          <%= f.text_field :content, class:'summernote' %>
-        </div>  
-      </div>
-
-
+  <div class="field">
+    <%= f.label :slide_number %><br>
+    <%= f.number_field :slide_number %>
+  </div>
+  <div class="row fullWidth" data-no-turbolink>
+    <div class="large-6 columns">
+      <div class="field">
+        <%= f.label :content %><br>
+       
+        <%= f.text_field :content, class:'summernote', id:"slide_content"%>
+      </div> 
       <div class="large-6 columns">
         <%= f.label :slides %><br>
         <div class="reveal-wrapper">
