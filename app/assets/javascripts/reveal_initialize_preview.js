@@ -76,23 +76,16 @@ Reveal.initialize({
 
 $( document ).ready(function() {
   // Handler for .ready() called.
-  $( "#updatePrev" ).click(function() {
   
-        $("#preview").html($.parseHTML($("#slide_content").code()));
-        console.log("button pressed");
+  
+        $("#preview").html($.parseHTML());
+        console.log("page loaded");
         Reveal.initialize();
-    });
+   
 
 });
 
 
-$(document).keydown(function (e) {
-    if ( e.which == 81 && e.ctrlKey) {
-        e.preventDefault();
-        $("#preview").html($.parseHTML($("#slide_content").code()));
-        console.log("key pressed");
-        Reveal.initialize();
-    }
-});
+
 
  
