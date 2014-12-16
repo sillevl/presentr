@@ -8,6 +8,15 @@
 <p>
   <strong>Content:</strong>
   <%= @slide.content %>
+  <!--  <div class="large-6 columns">
+   <div class="reveal-wrapper">
+            <div class="reveal">
+             <div class="slides">
+                <section id="preview"><%=raw @slide.content %></section>             
+             </div>
+            </div>
+         </div>
+    </div>  -->
 </p>
 
 <p>
@@ -17,3 +26,6 @@
 
 <%= link_to 'Edit', edit_slide_path(@slide), :class => 'button' %>
 <%= link_to 'Back', slides_path, :class => 'button' %>
+
+
+
