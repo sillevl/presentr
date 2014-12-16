@@ -23,12 +23,14 @@ class SlidesController < ApplicationController
 
   def create
     @slide = Slide.new(slide_params)
-    @slide.save
+        @slide.save
     respond_with(@slide)
   end
 
   def update
     @slide.update(slide_params)
+@slide.save
+     
     respond_with(@slide)
   end
 
@@ -43,6 +45,6 @@ class SlidesController < ApplicationController
     end
 
     def slide_params
-      params.require(:slide).permit(:slide_number, :content, :presentation_id, :slide_name)
+      params.require(:slide).permit(:slide_number, :content, :presentation_id, :image_id ,:slide_name, :image)
     end
 end

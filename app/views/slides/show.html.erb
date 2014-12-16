@@ -10,6 +10,14 @@
   <%= @slide.content %>
 </p>
 
+<% @slide.images.each do |p| %>
+<table>
+<td><%= p.name %></td>
+  <td><%= image_tag p.name %></td>
+</table>
+<% end %>
+
+
 <p>
   <strong>Presentation:</strong>
   <%= @slide.presentation_id %>

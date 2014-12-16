@@ -43,6 +43,21 @@
         </div>
       </div>  
     </div>
+
+
+
+   <%= f.fields_for :image do |p| %>
+     <div class="field">
+       <%= p.label :name %><br>
+       <%= p.file_field :name, :multiple => true %>
+     </div>
+   <% end %>
+
+   <div class="actions">
+     <%= f.submit %>
+   </div>
+
+
   </div>
 
 

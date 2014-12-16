@@ -18,6 +18,9 @@ gem 'codemirror-rails'
 
 # ----------------------------
 
+gem 'carrierwave'
+
+gem 'fog'
 
 gem 'rails-reveal-js'
 
