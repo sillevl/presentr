@@ -16,44 +16,40 @@
     <div class="field">
       <%= f.label :slide_name %><br>
       <%= f.text_field :slide_name %>
-  <div class="field">
-    <%= f.label :slide_number %><br>
-    <%= f.number_field :slide_number %>
-  </div>
-
-  <div class="row fullWidth" data-no-turbolink>
-    <div class="large-6 columns">
-      <div class="field">
-      <div class="row">
-        <div class="large-6 columns"> <p>Content</p> </div>
-         <div class="large-6 columns"><a class="button tiny right radius " id="updatePrev">Refresh View</a></div> <br> 
-      </div>
-        
-       
-        <%= f.text_field :content, class:'summernote', id:"slide_content"%>
-
-      </div>  
+    </div>
+    <div class="field">
+      <%= f.label :slide_number %><br>
+      <%= f.number_field :slide_number %>
     </div>
 
-
-    <div class="large-6 columns">
-      <p>Slide</p>
-      <div class="reveal-wrapper">
-        <div class="reveal">
-          <div class="slides">
-              <section id="preview"></section>             
-          </div>
+    <div class="row fullWidth" data-no-turbolink>
+      <div class="large-6 columns">
+        <div class="field">
+          <div class="row">
+            <div class="large-6 columns"> <p>Content</p> </div>
+             <div class="large-6 columns"><a class="button tiny right radius " id="updatePrev">Refresh View</a></div> <br> 
+          </div>      
+          <%= f.text_field :content, class:'summernote', id:"slide_content"%>
         </div>  
       </div>
-    </div>
 
 
-
-    <div class="field">
-      <%= f.hidden_field :presentation_id %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
+      <div class="large-6 columns">
+        <p>Slide</p>
+        <div class="reveal-wrapper">
+          <div class="reveal">
+            <div class="slides" style="width: auto !important">
+                <section id="preview"></section>             
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :presentation_id %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
     </div>
   </div>
 </div>    
