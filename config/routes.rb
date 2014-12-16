@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
 
+
   get 'presentations/:id/slides/new' => 'slides#new', as: 'presentation_new_slide'
   get 'presentations/:id/slides' => 'presentations#show', as: 'presentation_show_slides'
 

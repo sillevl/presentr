@@ -1,6 +1,6 @@
 class PresentationsController < ApplicationController
   before_action :set_presentation, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :authenticate_user!, only: [:index, :show]
   respond_to :html
 
   def index
@@ -22,6 +22,7 @@ class PresentationsController < ApplicationController
 
   def create
     @presentation = Presentation.new(presentation_params)
+    @presentation.user = current_user
     @presentation.save
     respond_with(@presentation)
   end
@@ -42,6 +43,6 @@ class PresentationsController < ApplicationController
     end
 
     def presentation_params
-      params.require(:presentation).permit(:name, :user_id, :course_id, :discription)
+      params.require(:presentation).permit(:name, :user_id, :course_id, :discription, :theme_id)
     end
 end

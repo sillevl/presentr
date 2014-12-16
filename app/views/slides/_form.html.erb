@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :slide_name %><br>
-    <%= f.text_field :slide_name %>
-  </div>
+<div class="row">
+  <div class="small-6 large-5 columns">
+    <div class="field">
+      <%= f.label :slide_name %><br>
+      <%= f.text_field :slide_name %>
   <div class="field">
     <%= f.label :slide_number %><br>
     <%= f.number_field :slide_number %>
@@ -30,6 +31,7 @@
         
        
         <%= f.text_field :content, class:'summernote', id:"slide_content"%>
+
       </div>  
     </div>
 
@@ -41,20 +43,20 @@
           <div class="slides">
               <section id="preview"></section>             
           </div>
-        </div>
-      </div>  
+        </div>  
+      </div>
+    </div>
+
+
+
+    <div class="field">
+      <%= f.hidden_field :presentation_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   </div>
-
-
-
-  <div class="field">
-    <%= f.hidden_field :presentation_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  
+</div>    
 <% end %>
 
 
