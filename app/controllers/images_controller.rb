@@ -9,7 +9,7 @@ class ImagesController < ApplicationController
   end
 
   def show
-    respond_with(@image)
+        respond_with(@image)
   end
 
   def new

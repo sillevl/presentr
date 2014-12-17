@@ -1,5 +1,9 @@
-			html, body{width:auto;height:auto;overflow:auto;}
 
+			html, body {
+				overflow: auto ;
+				#height: auto !important;
+				background: #fff;
+			}
 			.reveal-wrapper {
 				position: relative;
 				height: 400px;

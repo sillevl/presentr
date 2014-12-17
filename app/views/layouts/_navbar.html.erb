@@ -3,6 +3,7 @@
     <li class="name">
       <h1><%= link_to 'Home', "/" %></h1>
     </li>
+    
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon">
       <a href="#">
@@ -26,8 +27,11 @@
         <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
     	<% end %>
     </ul>
+    <ul class="left">
         <!-- Left Nav Section -->
-    <ul class="left"> 
+      <li class="name"><%= link_to 'Presentation', "/presentations" %></li>
+<li class="name"><%= link_to 'Course', "/courses" %></li>
+<li class="name"><%= link_to 'Images', "/images" %></li>
     </ul>
   </section>
 </nav>

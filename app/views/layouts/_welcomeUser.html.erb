@@ -1,5 +1,6 @@
-<h1>Welcome <%= current_user.email%></h1>
-Click any presentation to get detailed information about the presentation and to enter new slides.
+<p>	
+	Click any presentation to get detailed information about the presentation and to enter new slides.
+</p>
 <table>
 	<thead>
 		<tr>
@@ -15,7 +16,7 @@ Click any presentation to get detailed information about the presentation and to
 		</tr>
 	</thead>
 	<tbody>
-		<% if !@presentations.blank? %>	
+		<% if !@presentations.blank? %>
 			<% @presentations.each do |presentation| %>
 			<tr>
 				<td>
@@ -25,8 +26,8 @@ Click any presentation to get detailed information about the presentation and to
 					<%= presentation.discription %>
 				</td>
 				<td>
-					<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) %> |
-					<%= link_to 'Delete presentation', presentation, method: :delete, data: { confirm: 'Are you sure?' } %>
+					<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) if user_signed_in? %> |
+					<%= link_to 'Delete presentation', presentation, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? %>
 				</td>
 			</tr>
 			<% end %>
@@ -35,4 +36,4 @@ Click any presentation to get detailed information about the presentation and to
 		<% end %>
 	</tbody>
 </table>
-<%= link_to 'New presentation', new_presentation_path, :class => 'button' %>
+<%= link_to 'New presentation', new_presentation_path, :class => 'button' if user_signed_in? %>

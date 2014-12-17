@@ -14,10 +14,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= yield %>
-    
-    <%= render 'layouts/footer' %>
-    <%= yield :reveal%>
+  <%= render 'layouts/navbar' %>
+    <div style="padding:15px">
+      <%= yield %>
+    </div>
+      <%= render 'layouts/footer' %>
+      <%= yield :reveal%>
   </body>
 </html>

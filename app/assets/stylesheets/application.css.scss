@@ -10,6 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_self
+ *
+ *= require foundation
  *= require reveal
  *= require reveal-theme/default
  *= require reveal-theme/beige
@@ -20,17 +23,9 @@
  *= require reveal-theme/simple
  *= require reveal-theme/sky
  *= require reveal-theme/solarized
- 
-*= require_tree .
- *= require_self
- *
-
  *= require foundation_and_overrides
- *= require foundation
  *= require foundation_custom
-
- 
- 
+ *= require_tree .
  */
 
 
@@ -66,7 +61,5 @@ body {padding-top:3em;}
 //= require codemirror/modes/php
 //= require summernote
 //= require lang/summernote
-//= require_tree .
 //= require turbolinks
-//= require foundation 
 

@@ -1,45 +1,48 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="small-6 large-5 columns">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @presentation.name %>
-</p>
-<p>
-  <strong>Discription:</strong>
-  <%= @presentation.discription %>
-</p>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @presentation.name %>
+		</p>
+		<p>
+		  <strong>Discription:</strong>
+		  <%= @presentation.discription %>
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Slide number	
+					</th>
+					<th width="200">
+						Slide
+					</th>
+					<th>
+						User actions	
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% @presentation.slides.each do |slide| %>
+			<tr>
+				<td>
+					<%= link_to slide.slide_number, slide %>
+				</td>
+				<td>
+					<%=  slide.slide_name %>
+				</td>
+				<td>
+					<%= link_to 'Edit slide', edit_slide_path(slide.id) %> |
+					<%= link_to 'Delete slide', slide, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</td>
+			</tr>
+			<% end %>
+			</tbody>
+		</table>
 
-<table>
-	<thead>
-		<tr>
-			<th>
-				Slide number	
-			</th>
-			<th width="200">
-				Slide
-			</th>
-			<th>
-				User actions	
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-	<% @presentation.slides.each do |slide| %>
-	<tr>
-		<td>
-			<%= link_to slide.slide_number, slide %>
-		</td>
-		<td>
-			<%=  slide.slide_name %>
-		</td>
-		<td>
-			<%= link_to 'Edit slide', edit_slide_path(slide.id) %> |
-			<%= link_to 'Delete slide', slide, method: :delete, data: { confirm: 'Are you sure?' } %>
-		</td>
-	</tr>
-	<% end %>
-	</tbody>
-</table>
-
-<%= link_to 'New Slide', presentation_new_slide_path, :class => 'button' %>
-<%= link_to 'Back to all presentations', "/", :class => 'button' %>
+		<%= link_to 'New Slide', presentation_new_slide_path, :class => 'button' %>
+		<%= link_to 'Back to all presentations', "/", :class => 'button' %>
+	</div>
+</div>
