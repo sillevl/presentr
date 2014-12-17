@@ -10,7 +10,6 @@
 		  <strong>Discription:</strong>
 		  <%= @presentation.discription %>
 		</p>
-
 		
 			      
         <p>Slide</p>
@@ -24,14 +23,13 @@
             </div>
           </div>  
         </div>
-    
-
-			
+ 
 
 		<%= link_to 'New Slide', presentation_new_slide_path, :class => 'button' %>
 		<%= link_to 'Back to all presentations', "/", :class => 'button' %>
 	</div>
 </div>
+
 
 
 <% content_for :reveal do 

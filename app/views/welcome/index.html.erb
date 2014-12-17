@@ -1,5 +1,12 @@
-<% if user_signed_in? %>
-	<%= render 'layouts/welcomeUser' %>
-<% else %>
-	<%= render 'layouts/welcomeNoUser' %>
-<% end %>
+<div class="panel">
+	<h1>Welcome</h1>
+	<p>
+		<% if user_signed_in? %>
+		Click any presentation to get detailed information about the presentation and to enter new slides.
+		<% else %>
+		Please login to manage your presentations.
+		<% end %>
+	</p>
+</div>
+
+<%= render 'layouts/listCoursesAndPresentations' %>

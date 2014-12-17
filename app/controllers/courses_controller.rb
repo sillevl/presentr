@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
 
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-skip_before_filter :authenticate_user!, only: [:index, :show]
+  skip_before_filter :authenticate_user!, only: [:index, :show]
   respond_to :html
 
   def index
@@ -23,6 +23,7 @@ skip_before_filter :authenticate_user!, only: [:index, :show]
 
   def create
     @course = Course.new(course_params)
+    @course.user = current_user
     @course.save
     respond_with(@course)
   end

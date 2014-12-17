@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="small-6 large-5 columns">
+		<h1>Listing of courses.</h1>
+		<% if user_signed_in? %>
+		<%= link_to 'New Course', new_course_path, :class => 'button' %>
+		<% end %>
+
+		<% @courses.each do |course| %>
+			<h2><%= link_to course.name, course %></h2>
+			<% if user_signed_in? %>
+			<%= link_to 'New Presentation', new_presentation_path, :class => 'button' %>
+			<% end %>
+			<table>
+				<thead>
+					<tr>
+						<th width="200">
+							Presentation
+						</th>
+						<th>
+							Discription	
+						</th>
+						<th>
+							User actions	
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% course.presentations.each do |presentation| %>
+					    <tr>
+							<td>
+								<%= link_to presentation.name, presentation %>
+							</td>
+							<td>
+								<%= presentation.discription %>
+							</td>
+							<td>
+								<% if user_signed_in? %>
+									<%= link_to 'Edit presentation', edit_presentation_path(presentation.id) %> |
+									<%= link_to 'Delete presentation', presentation, method: :delete, data: { confirm: 'Are you sure?' } %>
+								<% end %>
+							</td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		<% end %>
+	</div>
+</div>
