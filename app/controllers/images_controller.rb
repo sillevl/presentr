@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :authenticate_user!, only: [:index, :show]
   respond_to :html
 
   def index
@@ -9,7 +9,7 @@ class ImagesController < ApplicationController
   end
 
   def show
-        respond_with(@image)
+    respond_with(@image)
   end
 
   def new
