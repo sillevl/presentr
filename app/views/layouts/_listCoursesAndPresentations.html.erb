@@ -7,7 +7,9 @@
 
 		<% @courses.each do |course| %>
 			<h2><%= link_to course.name, course %></h2>
+			<% if user_signed_in? %>
 			<%= link_to 'New Presentation', new_presentation_path, :class => 'button' %>
+			<% end %>
 			<table>
 				<thead>
 					<tr>
