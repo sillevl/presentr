@@ -26,3 +26,7 @@ $ ->
 	    # alert $('#post_content').code()
 	    summer_note.val summer_note.code()
 	    true
+
+	  summer_note.change -> 
+	  	console.log("test");
+	  	$("#preview").html($("#slide_content").code());

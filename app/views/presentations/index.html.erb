@@ -23,9 +23,12 @@
 </table>
 
 <br> -->
-
-<% if user_signed_in? %>
-  <%= render 'layouts/welcomeUser' %>
-<% else %>
-  <%= render 'layouts/welcomeNoUser' %>
-<% end %>
+<div class="row">
+  <div class="small-6 large-5 columns">
+    <% if user_signed_in? %>
+      <%= render 'layouts/welcomeUser' %>
+    <% else %>
+      <%= render 'layouts/welcomeNoUser' %>
+    <% end %>
+  </div>
+</div>

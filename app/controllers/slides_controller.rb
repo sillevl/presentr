@@ -1,6 +1,6 @@
 class SlidesController < ApplicationController
   before_action :set_slide, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :authenticate_user!, only: [:index, :show]
   respond_to :html
 
   def index
@@ -14,6 +14,7 @@ class SlidesController < ApplicationController
 
   def new
     @slide = Slide.new
+    @slide.presentation = Presentation.find_by_id(params[:id])
     respond_with(@slide)
   end
 
